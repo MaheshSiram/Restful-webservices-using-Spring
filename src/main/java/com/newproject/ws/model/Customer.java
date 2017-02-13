@@ -5,18 +5,29 @@ package com.newproject.ws.model;
  */
 public class Customer {
 
-     private long id;
-     private String Name;
+      private long id;
+      private long UserID;
+      private String Name;
+
      private String Company;
 
     public Customer() {
 
     }
 
-    public Customer(long id, String name, String company) {
+    public Customer(long id, String name, String company, long userID) {
         this.id = id;
         Name = name;
         Company = company;
+        UserID = userID;
+    }
+
+    public long getUserID() {
+        return UserID;
+    }
+
+    public void setUserID(long userID) {
+        UserID = userID;
     }
 
     public long getId() {

@@ -18,9 +18,21 @@ public class CustomerController {
     private static List<Customer> list = new ArrayList<Customer>();
 
     static {
-        list.add(new Customer(1l,"Jack","Apple"));
-        list.add(new Customer(2l,"Mahesh","Google"));
-        list.add(new Customer(3l,"Alia","Amazon"));
+        list.add(new Customer(1l,"Jack","Apple", 1l));
+        list.add(new Customer(2l,"John","Apple", 1l));
+        list.add(new Customer(3l,"Alex","Apple", 1l));
+        list.add(new Customer(4l,"Salaj","Apple", 1l));
+
+        list.add(new Customer(1l,"Mahesh","Google", 2l));
+        list.add(new Customer(2l,"Mitra","Google", 2l));
+        list.add(new Customer(2l,"Tom","Google", 2l));
+        list.add(new Customer(2l,"Sam","Google", 2l));
+
+        list.add(new Customer(3l,"Christy","Amazon", 3l));
+        list.add(new Customer(3l,"Nile","Amazon", 3l));
+        list.add(new Customer(3l,"Sunny","Amazon", 3l));
+        list.add(new Customer(3l,"David","Amazon", 3l));
+
     }
 
     @RequestMapping(value = "" ,method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
